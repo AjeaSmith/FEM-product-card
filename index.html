@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,500;1,500&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --clr-text: #6C7289;
+      --clr-white: #FFFFFF;
+      --clr-bg: #F2EAE2;
+      --clr-green-400: #3D8168;
+      --clr-green-800: #1A4032;
+      --clr-blue-900: #1C232B;
+    }
+
+    * {
+      margin: 0;
+    }
+
+    body {
+      font-size: 0.875rem;
+      /* 14px */
+      font-family: "Montserrat", serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+      background-color: var(--clr-bg);
+      color: var(--clr-text)
+    }
+
+    h1,
+    h2 {
+      color: var(--clr-blue-900);
+      font-family: "Fraunces", serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 2rem;
+      /* 32px */
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: var(--clr-green-400)
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* LAYOUT */
+    main {
+      padding-inline: 1rem;
+      padding-block: 1.5rem;
+      margin-inline: auto;
+      max-width: 600px;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-rows: 0.8fr 1fr;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    .content_wrapper {
+      background-color: var(--clr-white);
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      padding-block: 1.5rem;
+      padding-inline: 1.5rem;
+      display: grid;
+      gap: 1rem;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+      }
+
+      .price {
+        font-size: 0.813rem;
+        text-decoration: line-through;
+      }
+
+      .headline {
+        font-size: 0.75rem;
+        /* 12px */
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
+
+      button {
+        color: var(--clr-white);
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-block: 1rem;
+        gap: 12px;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--clr-green-400);
+      }
+    }
+
+    .img_wrapper {
+      background-image: url('./images/image-product-mobile.jpg');
+      background-position: center;
+      background-size: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    @media (min-width: 43.125rem) {
+
+      .wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+
+      .img_wrapper {
+        background-image: url('./images/image-product-desktop.jpg');
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      .content_wrapper {
+        padding: 2rem;
+
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <section class="wrapper">
+      <div class="img_wrapper"></div>
+      <!-- <img src="./images/image-product-mobile.jpg" alt="Perfume bottle on table"> -->
+      <div class="content_wrapper">
+        <p class="headline">Perfume</p>
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
+        <span>
+          <h2>$149.99</h2>
+          <p class="price">$169.99</p>
+        </span>
+        <button><img src="./images/icon-cart.svg" alt="cart icon"> Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://hobbyist-dev-log.netlify.app/" target="_blank">Ajea Smith</a>.
+  </div>
+</body>
+
+</html>
