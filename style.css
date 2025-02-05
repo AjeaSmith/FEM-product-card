@@ -1,0 +1,148 @@
+:root {
+	--clr-text: #6c7289;
+	--clr-white: #ffffff;
+	--clr-bg: #f2eae2;
+	--clr-green-400: #3d8168;
+	--clr-green-800: #1a4032;
+	--clr-blue-900: #1c232b;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	font-size: 0.875rem;
+	/* 14px */
+	font-family: "Montserrat", serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	background-color: var(--clr-bg);
+	color: var(--clr-text);
+}
+
+h1,
+h2 {
+	color: var(--clr-blue-900);
+	font-family: "Fraunces", serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 2rem;
+	/* 32px */
+}
+
+p {
+	line-height: 1.6;
+}
+
+h2 {
+	color: var(--clr-green-400);
+}
+
+/* LAYOUT */
+main {
+	padding-inline: 1rem;
+	padding-block: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-inline: auto;
+	height: 100vh;
+	max-width: 600px;
+}
+
+.wrapper {
+	display: grid;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+
+picture {
+	overflow: hidden;
+	display: block;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+picture img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.content_wrapper {
+	background-color: var(--clr-white);
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	padding-block: 1.5rem;
+	padding-inline: 1.5rem;
+	display: grid;
+	gap: 1rem;
+
+	span {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+	}
+
+	.price {
+		font-size: 0.813rem;
+		text-decoration: line-through;
+	}
+
+	.headline {
+		font-size: 0.75rem;
+		/* 12px */
+		letter-spacing: 5px;
+		text-transform: uppercase;
+	}
+
+	button {
+		color: var(--clr-white);
+		font-weight: 600;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-block: 1rem;
+		gap: 12px;
+		border-radius: 5px;
+		border: none;
+		background-color: var(--clr-green-400);
+	}
+}
+
+@media (min-width: 43.125rem) {
+	.wrapper {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+	}
+
+	picture {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+	}
+
+	.content_wrapper {
+		padding: 2rem;
+
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
+}
+
+.attribution {
+	margin-top: 20px;
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
